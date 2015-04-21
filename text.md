@@ -4,7 +4,6 @@ Un nuevo paso The JavaScript World Domination
 https://medium.com/@slsoftworks/javascript-world-domination-af9ca2ee5070
 
 Encuesta:
-- Cuantos conocen react?
 - Cuantos han desarrollado aplicaciones para móviles?
 - Cuantos han desarrrolado aplicaciones nativas para móviles?
 
@@ -18,6 +17,7 @@ React está causando bastante revuelo últimamente. Por varias razones
 
 *React features*
 
+- Interfaces declarativas!
 - Siempre renderiza todo como forma de mantener todo sincronizado
 - Performance
 - Facebook, instagram y otros lo están utilizando en sus productos estrella
@@ -55,24 +55,6 @@ http://engineering.flipboard.com/assets/mobileweb/follow_btn.gif
 http://engineering.flipboard.com/assets/mobileweb/topbar.gif
 
 
-```js
-var MyComponent = React.createClass({
-
-  render: function () {
-    return (
-      <Surface width={surfaceWidth} height={surfaceHeight} left={0} top={0}>
-        <Image style={imageStyle} src='...' />
-        <Text style={textStyle}>
-          Here is some text below an image.
-        </Text>
-      </Surface>
-    );
-  }
-  
-}
-```
-
-
 Podemos simplicar React a que es una tecnología que provee una representación de un arbol de componentes. Con un
 algoritmo eficiente para detectar cambios en ese árbol. 
 Luego ese arból de componentes podemos utilizarlo para renderizar en diferentes lugares.
@@ -104,6 +86,13 @@ https://twitter.com/floydophone/status/581343475284611072
 
 Esa época coincidió con el ataque del gobierno chino a github, por lo que no estaba muy clara la autoría del ataque 
 
+**Native development sucks**
+
+* iOS and Android
+* Developer Velocity
+* Reuse libraries
+* Manual View Layout
+
 
 *Facebook utiliza sus herramientas para sus propias aplicaciones*
 
@@ -134,27 +123,8 @@ Cómo funciona react native?
 - Batched updates
 - Todo el javascript se ejecuta en segundo plano
 - Componentes
+- Platform components. No reimplementarlos en html y css
 
-
-*¿Qué otras opciones existen?*
-
-- Cordova + Ionic Framework: Aplicaciones más sencilla de desarrollar y de matener. Multiplataforma. El principal problema es la calidad de las aplicaciones
-Son aplicaciones que se notan que no son nativas. Por muy potente que sea el dispostivo todavía no estamos en ese punto. Los componentes nativos tienen 
-animaciones de much más calidad.
-
-- RubyMotion o Xamarin: Son aplicaciones que son compiladas a código nativo con un runtime, de format que pueden llamar directamente a código nativo.
-Son dos plataforma de pago
-
-- iOS + Android : Desarrollar nativo tiene sus ventajas. No tienes ninguna limitaciones y tienes acceso a todas las api que proveen los frameworks. El 
-principal problema son costes de desarrollo. Son frameworks complejos, necesitas a gente especialida. Normalmente equipos distintos especialidad en 
-cada plataforma. Eso conlleva a problemas de duplicidad de código. Está claro que el codigo de visualización debe de ser distinto, perpo , pero todo 
-el código de lógica d ela aplciación podría ser común a  las dos aplicaciones.
-
-- React Native se situa en medio de Cordova y RubyMotion. La apróximación que utilizaron en facebook es que desde código JavaScript puedes llamar a ciertos
-métodos y puedes utilizar clases nativas como componentes. Tienes la posibilidad de crear tus propios componentes y código nativo. La idea básicamente
-es separar por un lado la creación de componentes nativos reutilizables de la creación de compnentes. Una aproximación muy interesante
-teniendo la popularización del framework. Mucha más gente empezará a crear componentes que podremos utilizar en nuestras aplicaciones.
- 
   
 *Demo time*
  
@@ -174,16 +144,14 @@ http://react.parts/native-ios
 Esta react native listo para producción?
 
 Supongo que la respuesta es si y no. Depende mucho del tipo de aplicación que tengas planeada. Es una tecnología bastante nueva
-y tiene sus bugs.
-
-https://github.com/facebook/react-native/issues/406#event-267646782
-https://github.com/facebook/react-native/issues/448
-
-Pero también es cierto que tiene cosas de herramientas maduras. Como buenos mensajes de error:
+y tiene sus bugs. Pero es cierto que facebook lleva tiempo desarrollandola antes de publicarla y que tienes detalles de herramienta
+madura como por ejemplo buenos mensajes de error:
 
 https://twitter.com/alan_reid/status/581991588290781185
  
 *Conclusiones*
+
+**Merece la pena invertir tu tiempo en aprender react / react native?**
 
 Vale la pena invertir tu tiempo en una tecnología desarrollada por facebook?
 
@@ -197,7 +165,43 @@ tecnologías:
 
 https://twitter.com/HenrikJoreteg/status/581828092479414272
 
-Por qué react native puede ser un auténtico gamechanger? La clave está en este tweet
+
+**Dynamic crazy native mobile future powered by javascript**
 
 https://medium.com/@clayallsopp/a-dynamic-crazy-native-mobile-future-powered-by-javascript-70f2d56b1987
+
+La clave de la importancia que puede tener react native en el futuro está en este tweet
+
+https://twitter.com/sebmarkbage/status/575059848083058688
+
+Se refieres a los límites que imponete apple a la hora de actualizar las aplicaciones y qué tipo de actualizaciones
+tienen que pasar por revisión.
+
+https://twitter.com/steipete/status/581150907502628864
+
+Básicamente quiere decir que podemos actualizar partes de nuestra aplicación sin necesidad de pasar por revesión.
+
+El post de medium va un paso más allá y se plantea, por qué no podemos plantear una especie de navegador de aplicaciones nativas
+
+
+
+
+
+   
+
+   
+   
+Simplemente espera, la web añadirá todas estas features   
+
+Lo mejor de los dos mundos
+
+Scripting code for a native environment
+
+Roundtrip overhead
+
+Async and batched
+
+Declarative
+
+Incremental adoption
 
