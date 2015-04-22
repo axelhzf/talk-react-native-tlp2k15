@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "node_modules/.bin/cleaver slides.md",
-    "dev": "node_modules/.bin/watch -p \"slides.md\" -c \"npm run build\"",
+    "dev": "npm run build && node_modules/.bin/watch -p \"slides.md\" -c \"npm run build\"",
     "deploy": "git add . && git commit -m update && git push origin master && git checkout gh-pages && git merge master && git push origin gh-pages && git checkout master"
   },
   "dependencies": {

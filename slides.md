@@ -16,6 +16,10 @@ theme: ./theme
 
 --
 
+![Pinky brain](images/pinky-brain-2.jpg)
+
+--
+
 # why so much hype with React?
 
 --
@@ -47,7 +51,7 @@ React Canvas adds the ability for React components to render to &lt;canvas\> rat
 
 --
 
-## Element width animation 
+## Element width animation
 
 ![React canvas 1](images/react-canvas-1.gif)
 
@@ -74,9 +78,8 @@ React Canvas adds the ability for React components to render to Native Component
 --
 
 ## Open source
- 
+
 <blockquote class="twitter-tweet" lang="en"><p>i think <a href="https://twitter.com/github">@github</a>&#39;s &quot;sophisticated ddos attack&quot; is just a bunch of people trying out <a href="https://twitter.com/reactjs">@reactjs</a> native</p>&mdash; Pete Hunt (@floydophone) <a href="https://twitter.com/floydophone/status/581343475284611072">March 27, 2015</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 --
 
@@ -108,7 +111,7 @@ React Canvas adds the ability for React components to render to Native Component
 * Platform components
 
 --
- 
+
 ## How React Native works?
 
 * Javascript is executed in background
@@ -142,6 +145,15 @@ https://medium.com/@clayallsopp/a-dynamic-crazy-native-mobile-future-powered-by-
 
 --
 
+<blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/RReverser">@RReverser</a> Because of a tiny but important clarification. <a href="http://t.co/upC4B3c1Nx">pic.twitter.com/upC4B3c1Nx</a></p>&mdash; Sebastian Markbåge (@sebmarkbage) <a href="https://twitter.com/sebmarkbage/status/575059848083058688">March 9, 2015</a></blockquote>
+
+
+--
+
+<blockquote class="twitter-tweet" lang="en"><p>React Native is interesting from an app review perspective, since it basically allows to change/update your whole app remotely.</p>&mdash; Peter Steinberger (@steipete) <a href="https://twitter.com/steipete/status/581150907502628864">March 26, 2015</a></blockquote>
+
+--
+
 # Conclusion
 
 --
@@ -149,7 +161,6 @@ https://medium.com/@clayallsopp/a-dynamic-crazy-native-mobile-future-powered-by-
 # It's time to learn React
 
 <blockquote class="twitter-tweet" lang="en"><p>what i&#39;m most impressed about react is that i basically learned it in one day and am not frustrated at all. suck it, angular.</p>&mdash; Jongleberry (@jongleberry) <a href="https://twitter.com/jongleberry/status/588590842748637184">April 16, 2015</a></blockquote>
+
+
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-
