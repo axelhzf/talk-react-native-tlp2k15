@@ -162,5 +162,4 @@ https://medium.com/@clayallsopp/a-dynamic-crazy-native-mobile-future-powered-by-
 
 <blockquote class="twitter-tweet" lang="en"><p>what i&#39;m most impressed about react is that i basically learned it in one day and am not frustrated at all. suck it, angular.</p>&mdash; Jongleberry (@jongleberry) <a href="https://twitter.com/jongleberry/status/588590842748637184">April 16, 2015</a></blockquote>
 
-
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
