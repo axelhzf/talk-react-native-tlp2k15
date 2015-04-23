@@ -9,10 +9,17 @@ var {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  //Image,
+  //SwitchIOS
 } = React;
 
 var Demo = React.createClass({
+
+  getInitialState() {
+    return {switchIsOn : true}
+  },
+
   render: function() {
     return (
       <View style={styles.container}>
@@ -30,10 +37,22 @@ var Demo = React.createClass({
     );
 
 
-/*    <Image
+    /*
+    <Image
       style={styles.logo}
       source={{uri: 'http://facebook.github.io/react/img/logo_og.png'}}
-      />*/
+      />
+      */
+
+    /*
+    <Text style={styles.text} >
+      {this.state.switchIsOn ? "Activo" : "Inactivo"}
+    </Text>
+    <SwitchIOS
+      onValueChange={(value) => this.setState({switchIsOn: value})}
+      value={this.state.switchIsOn} />
+    */
+
 
   }
 });
