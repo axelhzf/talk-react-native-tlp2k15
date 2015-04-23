@@ -69,7 +69,7 @@ React Canvas adds the ability for React components to render to &lt;canvas\> rat
 
 # React Native
 
-React Canvas adds the ability for React components to render to Native Components rather than DOM.
+React Native adds the ability for React components to render to Native Components rather than DOM.
 
 --
 
