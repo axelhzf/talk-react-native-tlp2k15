@@ -106,12 +106,6 @@ React Canvas adds the ability for React components to render to Native Component
 
 --
 
-## Manual View Layout
-
-![layoutSubiews](images/layoutSubviews.png)
-
---
-
 ## React Native
 
 * Declarative views
