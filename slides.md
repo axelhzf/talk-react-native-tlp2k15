@@ -73,13 +73,23 @@ React Canvas adds the ability for React components to render to Native Component
 
 --
 
-![sorcery](images/mind-blow.gif)
+![](images/settings.jpg)
+
+```xml
+<View>
+  <Text style={styles.text} >
+    Accesibility Inspector
+  </Text>
+  <SwitchIOS
+      onValueChange={(value) => this.setState({falseSwitchIsOn: value})}
+      style={{marginBottom: 10}}
+      value={this.state.falseSwitchIsOn} />
+</View>
+```
 
 --
 
-## Open source
-
-<blockquote class="twitter-tweet" lang="en"><p>i think <a href="https://twitter.com/github">@github</a>&#39;s &quot;sophisticated ddos attack&quot; is just a bunch of people trying out <a href="https://twitter.com/reactjs">@reactjs</a> native</p>&mdash; Pete Hunt (@floydophone) <a href="https://twitter.com/floydophone/status/581343475284611072">March 27, 2015</a></blockquote>
+![mind-blow](images/mind-blow.gif)
 
 --
 
@@ -109,6 +119,7 @@ React Canvas adds the ability for React components to render to Native Component
 * npm modules
 * CSS subset
 * Platform components
+* Incremental adoption
 
 --
 
@@ -133,7 +144,7 @@ http://react.parts/native-ios
 
 --
 
-## Who is using react?
+## Who is using React Native?
 
 ![](images/fb-groups.jpg)
 
