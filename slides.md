@@ -380,7 +380,24 @@ var ListViewSimpleExample = React.createClass({
 
 ## Animations
 
+```javascript
+  componentWillMount() {
+    LayoutAnimation.spring();
+  },
 
+  getInitialState() {
+    return { w: 100, h: 100 }
+  },
+
+  _onPress() {
+    LayoutAnimation.spring();
+    if (this.state.w >= 145) {
+      this.setState({w: 100, h: 100})
+    } else {
+      this.setState({w: this.state.w + 15, h: this.state.h + 15})
+    }
+  },
+```
 
 --
 
