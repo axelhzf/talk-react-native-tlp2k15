@@ -1,7 +1,7 @@
 var React = require('react-native');
 var { AppRegistry } = React;
 
-var CurrentComponent = require("./components/3-EventHandler");
+var CurrentComponent = require("./components/4-ListView");
 
 var Main = React.createClass({
 
