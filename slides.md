@@ -124,11 +124,217 @@ React Native adds the ability for React components to render to Native Component
 
 --
 
-![science](http://i.imgur.com/4smu7.gif)
+![science](images/science.gif)
 
 --
 
-# Demo time
+# Getting started
+
+--
+
+## Installation
+
+```
+npm install -g react-native-cli
+react-native init Demo
+```
+
+--
+
+## Run the project
+
+```
+open Demo/Demo.xcodeproj
+```
+---
+
+## Development Tools
+
+![science](images/debugMenu.png)
+
+--
+
+## Hello World
+
+```javascript
+var HelloWorld = React.createClass({
+
+  render: function() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.welcome}>
+          Hello world
+        </Text>
+      </View>
+    );
+  }
+});
+```
+
+--
+
+## Hello World 2
+
+* `React.createClass` - Create a component class, given a specification.  
+* `render` - A component implements a render method which returns one single child
+* `<View>`, `<Text>` - Components
+
+-- 
+
+## JSX
+
+* JSX is a JavaScript syntax extension that looks similar to XML.
+* You don't have to use JSX with React.
+* Everybody uses JSX
+
+--
+
+## JSX Transformation
+
+```javascript
+var Nav, Profile;
+
+// Input (JSX):
+var app = (
+  <Nav color="blue">
+     <Profile>
+        click
+     </Profile>
+  </Nav>);
+
+// Output (JS):
+var app = React.createElement(
+  Nav,
+  {color:"blue"},
+  React.createElement(Profile, null, "click")
+);
+
+```
+
+--
+
+## Style
+
+* React Native doesn't implement CSS but instead relies on JavaScript to let you style your application. [Why?](https://speakerdeck.com/vjeux/react-css-in-js)
+* CSS Subset + Some Native properties ([View](https://facebook.github.io/react-native/docs/view.html#style), [Image](https://facebook.github.io/react-native/docs/image.html#style), [Text](https://facebook.github.io/react-native/docs/text.html#style), [Flex](Flex Properties), [Transform](https://facebook.github.io/react-native/docs/transforms.html#content) )
+* Layout using FlexBox
+
+--
+
+## Hello World Style
+
+```javascript
+var styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF'
+  },
+  welcome: {
+    fontSize: 60,
+    textAlign: 'center',
+    margin: 10
+  }
+});
+```
+
+--
+
+## Layout using Flexbox
+
+[http://flexboxin5.com/](http://flexboxin5.com/)
+[https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties](https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties)
+
+--
+
+## Layout
+
+```javascript
+var React = require('react-native');
+var { StyleSheet, Text, View, Image} = React;
+
+var Layout = React.createClass({
+
+  render: function() {
+    return (
+      <View style={styles.container}>
+        <Image
+          style={styles.image}
+          source={{uri: 'http://img2.wikia.nocookie.net/__cb20111004203534/adventuretimewithfinnandjake/images/b/b3/Jake.png'}}
+          />
+        <Text style={styles.welcome}>
+          Hello world 2
+        </Text>
+      </View>
+    );
+  }
+});
+```
+
+--
+
+## Layout Style
+
+```javascript
+var styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+    flexDirection: "row"
+  },
+  welcome: {
+    fontSize: 40,
+    textAlign: 'center',
+    margin: 10,
+    flex: 1
+  },
+  image: {
+    width: 135,
+    height: 210
+  }
+});
+```
+
+--
+
+## Event Handler
+
+![Event Handler](images/eventHandler.png)
+
+--
+
+## Event Handler
+
+```javascript
+var EventHandler = React.createClass({
+
+  getInitialState() {
+    return {active: false}
+  },
+
+  onChangeSwitch(value) {
+    this.setState({active: value})
+  },
+
+  render: function() {
+    var label = this.state.active ? "Active" : "Inactive";
+
+    return (
+      <View style={styles.container}>
+        <Text style={styles.text}>{label}</Text>
+        <SwitchIOS
+          onValueChange={this.onChangeSwitch}
+          style={styles.switch}
+          value={this.state.active} />
+      </View>
+    );
+  }
+
+});
+```
 
 --
 
@@ -168,4 +374,4 @@ https://medium.com/@clayallsopp/a-dynamic-crazy-native-mobile-future-powered-by-
 <blockquote class="twitter-tweet" lang="en"><p>what i&#39;m most impressed about react is that i basically learned it in one day and am not frustrated at all. suck it, angular.</p>&mdash; Jongleberry (@jongleberry) <a href="https://twitter.com/jongleberry/status/588590842748637184">April 16, 2015</a></blockquote>
 
 
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>

@@ -468,11 +468,193 @@ iframe {
 
   </section>
   <section>
-    <p><img src="http://i.imgur.com/4smu7.gif" alt="science"></p>
+    <p><img src="images/science.gif" alt="science"></p>
 
   </section>
   <section>
-    <h1 id="demo-time">Demo time</h1>
+    <h1 id="getting-started">Getting started</h1>
+
+  </section>
+  <section>
+    <h2 id="installation">Installation</h2>
+<pre><code>npm install -g react-native-cli
+react-native init Demo</code></pre>
+
+  </section>
+  <section>
+    <h2 id="run-the-project">Run the project</h2>
+<pre><code>open Demo/Demo.xcodeproj</code></pre>
+
+  </section>
+  <section>
+    <h2 id="development-tools">Development Tools</h2>
+<p><img src="images/debugMenu.png" alt="science"></p>
+
+  </section>
+  <section>
+    <h2 id="hello-world">Hello World</h2>
+<pre><code class="lang-javascript"><span class="keyword">var</span> HelloWorld = React.createClass({
+
+  render: <span class="keyword">function</span>() {
+    <span class="keyword">return</span> (
+      <span class="xml"><span class="tag">&lt;<span class="title">View</span> <span class="attribute">style</span>=<span class="value">{styles.container}</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Text</span> <span class="attribute">style</span>=<span class="value">{styles.welcome}</span>&gt;</span>
+          Hello world
+        <span class="tag">&lt;/<span class="title">Text</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">View</span>&gt;</span>
+    );
+  }
+});</span></code></pre>
+
+  </section>
+  <section>
+    <h2 id="hello-world-2">Hello World 2</h2>
+<ul>
+<li><code>React.createClass</code> - Create a component class, given a specification.  </li>
+<li><code>render</code> - A component implements a render method which returns one single child</li>
+<li><code>&lt;View&gt;</code>, <code>&lt;Text&gt;</code> - Components</li>
+</ul>
+
+  </section>
+  <section>
+    <h2 id="jsx">JSX</h2>
+<ul>
+<li>JSX is a JavaScript syntax extension that looks similar to XML.</li>
+<li>You don&#39;t have to use JSX with React.</li>
+<li>Everybody uses JSX</li>
+</ul>
+
+  </section>
+  <section>
+    <h2 id="jsx-transformation">JSX Transformation</h2>
+<pre><code class="lang-javascript"><span class="keyword">var</span> Nav, Profile;
+
+<span class="comment">// Input (JSX):</span>
+<span class="keyword">var</span> app = (
+  <span class="xml"><span class="tag">&lt;<span class="title">Nav</span> <span class="attribute">color</span>=<span class="value">"blue"</span>&gt;</span>
+     <span class="tag">&lt;<span class="title">Profile</span>&gt;</span>
+        click
+     <span class="tag">&lt;/<span class="title">Profile</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">Nav</span>&gt;</span>);
+
+// Output (JS):
+var app = React.createElement(
+  Nav,
+  {color:"blue"},
+  React.createElement(Profile, null, "click")
+);</span></code></pre>
+
+  </section>
+  <section>
+    <h2 id="style">Style</h2>
+<ul>
+<li>React Native doesn&#39;t implement CSS but instead relies on JavaScript to let you style your application. <a href="https://speakerdeck.com/vjeux/react-css-in-js">Why?</a></li>
+<li>CSS Subset + Some Native properties (<a href="https://facebook.github.io/react-native/docs/view.html#style">View</a>, <a href="https://facebook.github.io/react-native/docs/image.html#style">Image</a>, <a href="https://facebook.github.io/react-native/docs/text.html#style">Text</a>, <a href="Flex Properties">Flex</a>, <a href="https://facebook.github.io/react-native/docs/transforms.html#content">Transform</a> )</li>
+<li>Layout using FlexBox</li>
+</ul>
+
+  </section>
+  <section>
+    <h2 id="hello-world-style">Hello World Style</h2>
+<pre><code class="lang-javascript"><span class="keyword">var</span> styles = StyleSheet.create({
+  container: {
+    flex: <span class="number">1</span>,
+    justifyContent: <span class="string">'center'</span>,
+    alignItems: <span class="string">'center'</span>,
+    backgroundColor: <span class="string">'#F5FCFF'</span>
+  },
+  welcome: {
+    fontSize: <span class="number">60</span>,
+    textAlign: <span class="string">'center'</span>,
+    margin: <span class="number">10</span>
+  }
+});</code></pre>
+
+  </section>
+  <section>
+    <h2 id="layout-using-flexbox">Layout using Flexbox</h2>
+<p><a href="http://flexboxin5.com/"><a href="http://flexboxin5.com/">http://flexboxin5.com/</a></a>
+<a href="https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties"><a href="https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties">https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties</a></a></p>
+
+  </section>
+  <section>
+    <h2 id="layout">Layout</h2>
+<pre><code class="lang-javascript"><span class="keyword">var</span> React = require(<span class="string">'react-native'</span>);
+<span class="keyword">var</span> { StyleSheet, Text, View, Image} = React;
+
+<span class="keyword">var</span> Layout = React.createClass({
+
+  render: <span class="keyword">function</span>() {
+    <span class="keyword">return</span> (
+      <span class="xml"><span class="tag">&lt;<span class="title">View</span> <span class="attribute">style</span>=<span class="value">{styles.container}</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Image
+</span>          <span class="attribute">style</span>=<span class="value">{styles.image}</span>
+          <span class="attribute">source</span>=<span class="value">{{uri:</span> '<span class="attribute">http:</span>//<span class="attribute">img2.wikia.nocookie.net</span>/<span class="attribute">__cb20111004203534</span>/<span class="attribute">adventuretimewithfinnandjake</span>/<span class="attribute">images</span>/<span class="attribute">b</span>/<span class="attribute">b3</span>/<span class="attribute">Jake.png</span>'}}
+          /&gt;</span>
+        <span class="tag">&lt;<span class="title">Text</span> <span class="attribute">style</span>=<span class="value">{styles.welcome}</span>&gt;</span>
+          Hello world 2
+        <span class="tag">&lt;/<span class="title">Text</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">View</span>&gt;</span>
+    );
+  }
+});</span></code></pre>
+
+  </section>
+  <section>
+    <h2 id="layout-style">Layout Style</h2>
+<pre><code class="lang-javascript"><span class="keyword">var</span> styles = StyleSheet.create({
+  container: {
+    flex: <span class="number">1</span>,
+    justifyContent: <span class="string">'center'</span>,
+    alignItems: <span class="string">'center'</span>,
+    backgroundColor: <span class="string">'#F5FCFF'</span>,
+    flexDirection: <span class="string">"row"</span>
+  },
+  welcome: {
+    fontSize: <span class="number">40</span>,
+    textAlign: <span class="string">'center'</span>,
+    margin: <span class="number">10</span>,
+    flex: <span class="number">1</span>
+  },
+  image: {
+    width: <span class="number">135</span>,
+    height: <span class="number">210</span>
+  }
+});</code></pre>
+
+  </section>
+  <section>
+    <h2 id="event-handler">Event Handler</h2>
+<p><img src="images/eventHandler.png" alt="Event Handler"></p>
+
+  </section>
+  <section>
+    <h2 id="event-handler">Event Handler</h2>
+<pre><code class="lang-javascript"><span class="keyword">var</span> EventHandler = React.createClass({
+
+  getInitialState() {
+    <span class="keyword">return</span> {active: <span class="literal">false</span>}
+  },
+
+  onChangeSwitch(value) {
+    <span class="keyword">this</span>.setState({active: value})
+  },
+
+  render: <span class="keyword">function</span>() {
+    <span class="keyword">var</span> label = <span class="keyword">this</span>.state.active ? <span class="string">"Active"</span> : <span class="string">"Inactive"</span>;
+
+    <span class="keyword">return</span> (
+      <span class="xml"><span class="tag">&lt;<span class="title">View</span> <span class="attribute">style</span>=<span class="value">{styles.container}</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">Text</span> <span class="attribute">style</span>=<span class="value">{styles.text}</span>&gt;</span>{label}<span class="tag">&lt;/<span class="title">Text</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">SwitchIOS
+</span>          <span class="attribute">onValueChange</span>=<span class="value">{this.onChangeSwitch}</span>
+          <span class="attribute">style</span>=<span class="value">{styles.switch}</span>
+          <span class="attribute">value</span>=<span class="value">{this.state.active}</span> /&gt;</span>
+      <span class="tag">&lt;/<span class="title">View</span>&gt;</span>
+    );
+  }
+
+});</span></code></pre>
 
   </section>
   <section>
@@ -505,7 +687,7 @@ iframe {
 <blockquote class="twitter-tweet" lang="en"><p>what i&#39;m most impressed about react is that i basically learned it in one day and am not frustrated at all. suck it, angular.</p>&mdash; Jongleberry (@jongleberry) <a href="https://twitter.com/jongleberry/status/588590842748637184">April 16, 2015</a></blockquote>
 
 
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </section>
   <section>
     <div class="author">
