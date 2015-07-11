@@ -39,9 +39,9 @@ theme: ./theme
 
 --
 
-## Stalking React
+## React’s diff algorithm
 
-![Stalking react](images/stalking.gif)
+[http://calendar.perfplanet.com/2013/diff/](http://calendar.perfplanet.com/2013/diff/)
 
 --
 
@@ -407,12 +407,6 @@ http://react.parts/native-ios
 
 --
 
-## Who is using React Native?
-
-![](images/fb-groups.jpg)
-
---
-
 ## Dynamic crazy native mobile future powered by javascript
 
 https://medium.com/@clayallsopp/a-dynamic-crazy-native-mobile-future-powered-by-javascript-70f2d56b1987
@@ -438,3 +432,15 @@ https://medium.com/@clayallsopp/a-dynamic-crazy-native-mobile-future-powered-by-
 
 
 <script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-31904298-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
